@@ -435,8 +435,8 @@ class Player(AdvancedHitbox): # p
 						self.get_vec_move().set_x(0)
 						self.set_jumped_while_sliding(False)
 					# print(self.get_vec_move().get_y())
-					if self.get_vec_move().get_y() > 1000:
-						print("Splat sfx")
+					# if self.get_vec_move().get_y() > 1000:
+					# 	print("Splat sfx")
 				self.get_vec_move().set_y(0)
 				break
 		p_temp.get_pt().set_x(p_temp.get_pt().get_x() + p_temp.get_vec_move().get_x() * delta)
@@ -532,7 +532,7 @@ class Teleporter(Surface):
 		player.get_vec_move().set_x(0)
 		player.get_vec_move().set_y(0)
 		dif = self.calc_height()
-		print("teleport sfx")
+		# print("teleport sfx")
 		for wall in walls:
 			wall.get_pt().set_y(wall.get_pt().get_y() - dif)
 
@@ -574,7 +574,7 @@ class Button(Hitbox):
 class ToggleButton(Button):
 	def __init__(self, pt: Vector, w: float, h: float, text, user, value: bool, has_border: bool, location: String, font: pygame.font, color: str = "#ff0000"):
 		super().__init__(pt, w, h, text, has_border, location, font, color)
-		self.on_color = "#12d932"
+		self.on_color = "#00ff00"
 		self.off_color = "#ff0000"
 		self.value = value
 		self.toggle = True
