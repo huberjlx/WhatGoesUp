@@ -46,3 +46,23 @@
      - then navigate to folder that your download is in
      - Ex: cd OneDrive\Documents\GitHub\WhatGoesUp
      - type in terminal: python3 main.py
+
+# My Records
+  - Jumping Challenge:
+    - 0:00:05.455207
+  - Double Jumping Challenge:
+    - 0:00:10.368283
+  - Sliding Challenge:
+    - 0:00:14.051456
+  - Slide Jumping Challenge:
+    - 0:00:06.722114
+  - Wall Bounce Challenge:
+    - 0:00:29.640874
+  - Death Challenge:
+    - 0:00:11.442054
+  - Ultimate Challenge:
+    - 0:00:49.926732
+  - Training Course:
+    - 0:32:40.310946
+  - Ice Peak:
+    - Not completed yet without rage quitting or cheating
