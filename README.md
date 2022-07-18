@@ -5,7 +5,7 @@
  Let me know if anything goes wrong.
 
 # Download Instructions
-  Windows download
+     Windows download
      1) Click the code button in the top of the screen. Then select download zip.
      2) Extract all files
      - Open file explorer => right click on folder => click extract all
