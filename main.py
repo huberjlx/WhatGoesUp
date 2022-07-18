@@ -1,6 +1,5 @@
 from __future__ import annotations # for type hints
 import pygame # graphics library
-import pygame_menu
 from pygame.locals import * # for keyboard input (ex: 'K_w')
 import time # for fps/delta
 import datetime # for timer
