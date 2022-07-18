@@ -352,6 +352,10 @@ def draw_settings(win: pygame.Surface, fonts: pygame.font, player: Player, butto
 	win.fill("#6fcae8")
 	surf_text = fonts[0].render("SETTINGS", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
+	surf_text = fonts[1].render("press enter to confirm key change", True, "#ffffff")
+	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 900))
+	surf_text = fonts[1].render("not all keys allowed as inputs", True, "#ffffff")
+	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 1000))
 	for i in range(len(input_rects)):
 		user_text = user_texts[i]
 		color = input_colors[i]
