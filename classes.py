@@ -539,7 +539,7 @@ class Teleporter(Surface):
 
 
 class Button(Hitbox):
-	def __init__(self, pt: Vector, w: float, h: float, text: String, has_border: bool, location: String, font: pygame.font, color: str = "#ff0000"):
+	def __init__(self, pt: Vector, w: float, h: float, text: String, has_border: bool, location: String, font: pygame.font, color: str = "#ffffff"):
 		super().__init__(pt, w, h, color)
 		self._text = text
 		self._has_border = has_border

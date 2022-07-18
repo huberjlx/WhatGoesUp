@@ -191,8 +191,8 @@ def handle_inputs(win, font, input_rects, actives, user_texts, input_colors, col
 
 def draw_welcome(win: pygame.Surface, font: pygame.font, hb_mouse: Hitbox, buttons: list[Button]) -> None:
 	# 60 font
-	win.fill("#fdf6e3")
-	surf_text = font.render("WHAT GOES UP...", True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = font.render("WHAT GOES UP...", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
 	for button in buttons:
 		button.draw(win)
@@ -200,8 +200,8 @@ def draw_welcome(win: pygame.Surface, font: pygame.font, hb_mouse: Hitbox, butto
 
 def draw_selection(win: pygame.Surface, font: pygame.font, hb_mouse: Hitbox, buttons: list[Button]) -> None:
 	# 60 font
-	win.fill("#fdf6e3")
-	surf_text = font.render("MAP SELECTION", True, "#000000")
+	win.fill("#0713ed")
+	surf_text = font.render("MAP SELECTION", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 200))
 
 	for button in buttons:
@@ -209,8 +209,8 @@ def draw_selection(win: pygame.Surface, font: pygame.font, hb_mouse: Hitbox, but
 	# hb_mouse.draw(win)
 
 def draw_challenge(win: pygame.Surface, font: pygame.font, hb_mouse: Hitbox, buttons: list[Button]) -> None:
-	win.fill("#fdf6e3")
-	surf_text = font.render("CHALLENGES", True, "#000000")
+	win.fill("#0713ed")
+	surf_text = font.render("CHALLENGES", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 200))
 
 	for button in buttons:
@@ -282,10 +282,10 @@ def draw_pause(win: pygame.Surface, font: pygame.font, player: Player, walls: li
 def draw_finished(win: pygame.Surface, font: pygame.font, player: Player, walls: list[Surface], hb_mouse: Hitbox, delta: float, buttons: list[Button], elapsed_time) -> None:
 	# 60 font
 	# win.fill("#3973fa")
-	win.fill("#fdf6e3")
-	surf_text = font.render("YOU FINISHED", True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = font.render("YOU FINISHED", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
-	surf_text = font.render("Time Taken:", True, "#000000")
+	surf_text = font.render("Time Taken:", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 200))
 
 	times = str(elapsed_time).split(":")
@@ -295,38 +295,38 @@ def draw_finished(win: pygame.Surface, font: pygame.font, player: Player, walls:
 		time = str(times[1]) + ":" + str(times[2]) + " minutes"
 	else:
 		time = str(times[2]) + " seconds"
-	surf_text = font.render(time, True, "#000000")
+	surf_text = font.render(time, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 300))
 	for button in buttons:
 		button.draw(win)
 	# hb_mouse.draw(win)
 
 def draw_selc_leaderboard(win, font, buttons):
-	win.fill("#fdf6e3")
-	surf_text = font.render("LEADERBOARDS", True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = font.render("LEADERBOARDS", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
-	surf_text = font.render("CHALLENGES", True, "#ff0000")
+	surf_text = font.render("CHALLENGES", True, "#ffffff")
 	win.blit(surf_text, (win.get_width() / 20, 250))
-	surf_text = font.render("MAPS", True, "#ff0000")
+	surf_text = font.render("MAPS", True, "#ffffff")
 	win.blit(surf_text, (win.get_width() / 2, 250))
 
 	for button in buttons:
 		button.draw(win)
 
 def draw_leaderboard(win, fonts, times, name, buttons):
-	win.fill("#fdf6e3")
-	surf_text = fonts[0].render(name, True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = fonts[0].render(name, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
 
 	for i in range(len(times)):
-		surf_text = fonts[1].render("%d) %s" % (i + 1, times[i]), True, "#ff0000")
+		surf_text = fonts[1].render("%d) %s" % (i + 1, times[i]), True, "#ffffff")
 		win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 200 + ((surf_text.get_height() + 30) * i)))
 	for button in buttons:
  		button.draw(win)
 
 def draw_mechanics(win, fonts, buttons, user):
-	win.fill("#fdf6e3")
-	surf_text = fonts[0].render("CONTROLS", True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = fonts[0].render("CONTROLS", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
 
 	l1 = "Walk Right: %s" % pygame.key.name(user.settings[0])
@@ -334,23 +334,23 @@ def draw_mechanics(win, fonts, buttons, user):
 	l3 = "Jump: %s" % pygame.key.name(user.settings[2])
 	l4 = "Slide: %s" % pygame.key.name(user.settings[3])
 	l5 = "Super Jumping: %s + %s" % (pygame.key.name(user.settings[3]), pygame.key.name(user.settings[2]))
-	surf_text = fonts[2].render(l1, True, "#ff0000")
+	surf_text = fonts[2].render(l1, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 225))
-	surf_text = fonts[2].render(l2, True, "#ff0000")
+	surf_text = fonts[2].render(l2, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 325))
-	surf_text = fonts[2].render(l3, True, "#ff0000")
+	surf_text = fonts[2].render(l3, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 425))
-	surf_text = fonts[2].render(l4, True, "#ff0000")
+	surf_text = fonts[2].render(l4, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 525))
-	surf_text = fonts[2].render(l5, True, "#ff0000")
+	surf_text = fonts[2].render(l5, True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 625))
 
 	for button in buttons:
 		button.draw(win)
 
 def draw_settings(win: pygame.Surface, fonts: pygame.font, player: Player, buttons, input_rects, user_texts, input_colors, texts):
-	win.fill("#fdf6e3")
-	surf_text = fonts[0].render("SETTINGS", True, "#ff0000")
+	win.fill("#0713ed")
+	surf_text = fonts[0].render("SETTINGS", True, "#ffffff")
 	win.blit(surf_text, ((win.get_width() - surf_text.get_width())/2, 100))
 	for i in range(len(input_rects)):
 		user_text = user_texts[i]
@@ -556,27 +556,27 @@ def create_buttons(win: pygame.Surface, font: pygame.font, user):
 	surf_text = font.render("BACK", True, "#000000")
 	back_button = Button(Vector(win.get_width() / 20, win.get_height() * 0.05), surf_text.get_width(), surf_text.get_height(), "BACK", False, "welcome", font)
 	surf_text = font.render("PLAY TRAINING COURSE", True, "#000000")
-	s_train_button = Button(Vector(win.get_width() / 20, 600), surf_text.get_width(), surf_text.get_height(), "PLAY TRAINING COURSE", False, "0", font)
+	s_train_button = Button(Vector(win.get_width() / 20, 600), surf_text.get_width(), surf_text.get_height(), "PLAY TRAINING COURSE", False, "0", font, "#f09e24")
 	surf_text = font.render("PLAY ICE PEAK", True, "#000000")
-	s_ice_button = Button(Vector(win.get_width() / 20, s_train_button.get_pt().get_y() + s_train_button.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY ICE PEAK", False, "8", font)
+	s_ice_button = Button(Vector(win.get_width() / 20, s_train_button.get_pt().get_y() + s_train_button.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY ICE PEAK", False, "8", font, "#f03524")
 	surf_text = font.render("PLAY CHALLENGES", True, "#000000")
 	s_tut_button = Button(Vector(win.get_width() / 20, s_train_button.get_pt().get_y() - 20 - surf_text.get_height()), surf_text.get_width(), surf_text.get_height(), "PLAY CHALLENGES", False, "challenge", font)
 	surf_text = font.render("BACK", True, "#000000")
 	t_back_button = Button(Vector(win.get_width() / 20, win.get_height() * 0.05), surf_text.get_width(), surf_text.get_height(), "BACK", False, "selection", font)
 	surf_text = font.render("PLAY JUMPING CHALLENGE", True, "#000000")
-	t_1 = Button(Vector(win.get_width() / 20, 400), surf_text.get_width(), surf_text.get_height(), "PLAY JUMPING CHALLENGE", False, "1", font)
+	t_1 = Button(Vector(win.get_width() / 20, 400), surf_text.get_width(), surf_text.get_height(), "PLAY JUMPING CHALLENGE", False, "1", font, "#1fd415")
 	surf_text = font.render("PLAY DOUBLE JUMPING CHALLENGE", True, "#000000")
-	t_2 = Button(Vector(win.get_width() / 20, t_1.get_pt().get_y() + t_1.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY DOUBLE JUMPING CHALLENGE", False, "2", font)
+	t_2 = Button(Vector(win.get_width() / 20, t_1.get_pt().get_y() + t_1.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY DOUBLE JUMPING CHALLENGE", False, "2", font, "#1fd415")
 	surf_text = font.render("PLAY SLIDING CHALLENGE", True, "#000000")
-	t_3 = Button(Vector(win.get_width() / 20, t_2.get_pt().get_y() + t_2.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY SLIDING CHALLENGE", False, "3", font)
+	t_3 = Button(Vector(win.get_width() / 20, t_2.get_pt().get_y() + t_2.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY SLIDING CHALLENGE", False, "3", font, "#1fd415")
 	surf_text = font.render("PLAY SLIDING JUMPING CHALLENGE", True, "#000000")
-	t_4 = Button(Vector(win.get_width() / 20, t_3.get_pt().get_y() + t_3.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY SLIDING JUMPING CHALLENGE", False, "4", font)
+	t_4 = Button(Vector(win.get_width() / 20, t_3.get_pt().get_y() + t_3.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY SLIDING JUMPING CHALLENGE", False, "4", font, "#1fd415")
 	surf_text = font.render("PLAY WALL BOUNCE CHALLENGE", True, "#000000")
-	t_5 = Button(Vector(win.get_width() / 20, t_4.get_pt().get_y() + t_4.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY WALL BOUNCE CHALLENGE", False, "5", font)
+	t_5 = Button(Vector(win.get_width() / 20, t_4.get_pt().get_y() + t_4.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY WALL BOUNCE CHALLENGE", False, "5", font, "#1fd415")
 	surf_text = font.render("PLAY DEATH CHALLENGE", True, "#000000")
-	t_6 = Button(Vector(win.get_width() / 20, t_5.get_pt().get_y() + t_5.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY DEATH CHALLENGE", False, "6", font)
+	t_6 = Button(Vector(win.get_width() / 20, t_5.get_pt().get_y() + t_5.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY DEATH CHALLENGE", False, "6", font, "#1fd415")
 	surf_text = font.render("PLAY ULTIMATE CHALLENGE", True, "#000000")
-	t_7 = Button(Vector(win.get_width() / 20, t_6.get_pt().get_y() + t_6.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY ULTIMATE CHALLENGE", False, "7", font)
+	t_7 = Button(Vector(win.get_width() / 20, t_6.get_pt().get_y() + t_6.get_h() + 20), surf_text.get_width(), surf_text.get_height(), "PLAY ULTIMATE CHALLENGE", False, "7", font, "#f09e24")
 	surf_text = font.render("NEXT LEVEL", True, "#000000")
 	continue_button = Button(Vector(win.get_width() / 2 - surf_text.get_width() / 2, win.get_height() * .475), surf_text.get_width(), surf_text.get_height(), "NEXT LEVEL", False, "continue", font)
 	surf_text = font.render("EXIT TO DESKTOP", True, "#000000")
