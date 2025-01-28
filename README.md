@@ -14,6 +14,7 @@
        - choose the most updated version (big yellow button in the middle)
        - Run the .exe
        - make sure that launch installer and add to PATH are checked
+        - You will not be able to run the game if this doesn't work
        - click install, and allow the installer to make changes to your device if necessary
        4) Install pygame
        - Go to search bar in bottom left
